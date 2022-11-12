@@ -29,8 +29,8 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /**************************************************************************** */
 
-  //! END @TODO1
-  app.get( "/filteredimage", async ( req, res ) => {
+
+  app.get( "/filteredimage", async ( req:express.Request, res:express.Response ) => {
     const image_url = req.query.image_url;
     if(image_url)
       {         
@@ -43,6 +43,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       .send( "Image url not Exists");
       }
     } );
+  //! END @TODO1
   // Root Endpoint
   // Displays a simple message to the user
   app.get( "/", async ( req, res ) => {
